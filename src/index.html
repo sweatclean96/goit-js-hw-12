@@ -2,22 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>GoIT JS HW 12</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <div class="form-container">
+      <form class="search-form" id="search-form">
+        <input
+          type="text"
+          placeholder="Search images..."
+          class="search-input"
+        />
+        <button type="submit" class="search-btn">Search</button>
+      </form>
+    </div>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+    <div class="loader-container hidden" id="loader-container">
+      <span class="loader" id="loader"></span>
+    </div>
 
-    <load src="./partials/footer.html" />
+    <ul class="gallery" id="gallery"></ul>
 
+    <div class="loader-more-container hidden" id="loader-more-container">
+      <span class="loader" id="loader-more"></span>
+    </div>
+
+    <button
+      type="submit"
+      form="search-form"
+      class="load-more-btn hidden"
+      id="load-more"
+    >
+      Load more
+    </button>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
